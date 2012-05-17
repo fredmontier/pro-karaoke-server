@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2011/10/30 19:17:10.887.pas,C:\Users\axioo\Documents\RAD Studio\Projects\Unit1.pas=D:\OTHERS\KaraokeServer\Setting\uDatabase.pas</Transaction>
+    <Transaction>2011/10/30 19:17:10.887.dfm,C:\Users\axioo\Documents\RAD Studio\Projects\Unit1.dfm=D:\OTHERS\KaraokeServer\Setting\uDatabase.dfm</Transaction>
+    <Transaction>2011/10/30 19:17:22.708.dproj,C:\Users\axioo\Documents\RAD Studio\Projects\Project1.dproj=D:\OTHERS\KaraokeServer\Setting\Setting.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,44 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{e5346917-bcdc-4636-ac30-381fa1c96c9c}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Projects Include="..\KaraokeEnterprise\ProKaraokeEnt.dproj" />
+    <Projects Include="KaraokeServer.dproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+  <BorlandProject xmlns=""> <Default.Personality> </Default.Personality> </BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="KaraokeServer">
+    <MSBuild Projects="KaraokeServer.dproj" Targets="" />
+  </Target>
+  <Target Name="KaraokeServer:Clean">
+    <MSBuild Projects="KaraokeServer.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="KaraokeServer:Make">
+    <MSBuild Projects="KaraokeServer.dproj" Targets="Make" />
+  </Target>
+  <Target Name="ProKaraokeEnt">
+    <MSBuild Projects="..\KaraokeEnterprise\ProKaraokeEnt.dproj" Targets="" />
+  </Target>
+  <Target Name="ProKaraokeEnt:Clean">
+    <MSBuild Projects="..\KaraokeEnterprise\ProKaraokeEnt.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="ProKaraokeEnt:Make">
+    <MSBuild Projects="..\KaraokeEnterprise\ProKaraokeEnt.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="KaraokeServer;ProKaraokeEnt" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="KaraokeServer:Clean;ProKaraokeEnt:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="KaraokeServer:Make;ProKaraokeEnt:Make" />
+  </Target>
+  <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
+</Project>
