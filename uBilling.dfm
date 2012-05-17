@@ -1,0 +1,637 @@
+object FrmBilling: TFrmBilling
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderWidth = 2
+  ClientHeight = 373
+  ClientWidth = 703
+  Color = clBackground
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = True
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignSize = (
+    703
+    373)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object AdvSmoothStatusIndicator6: TAdvSmoothStatusIndicator
+    Left = 524
+    Top = 60
+    Width = 55
+    Height = 27
+    Hint = 'Waktu Room Habis'
+    Caption = 'END'
+    Version = '1.0.1.0'
+    Appearance.Fill.Color = clRed
+    Appearance.Fill.ColorMirror = clNone
+    Appearance.Fill.ColorMirrorTo = clNone
+    Appearance.Fill.GradientType = gtSolid
+    Appearance.Fill.BorderColor = clGray
+    Appearance.Fill.Rounding = 13
+    Appearance.Fill.ShadowOffset = 0
+    Appearance.Font.Charset = DEFAULT_CHARSET
+    Appearance.Font.Color = clCream
+    Appearance.Font.Height = -15
+    Appearance.Font.Name = 'Tahoma'
+    Appearance.Font.Style = []
+    Anchors = [akTop, akRight]
+    ParentShowHint = False
+    ShowHint = True
+    ExplicitLeft = 517
+  end
+  object RzLabel4: TRzLabel
+    Left = 595
+    Top = 63
+    Width = 75
+    Height = 19
+    Alignment = taRightJustify
+    Anchors = [akTop, akRight]
+    Caption = '0 ROOMS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    Transparent = True
+    FlyByEnabled = True
+    LightTextStyle = True
+    TextStyle = tsRecessed
+    ExplicitLeft = 588
+  end
+  object PageControl1: TRzPageControl
+    Left = 30
+    Top = 152
+    Width = 123
+    Height = 36
+    ActivePage = TabSheet4
+    DblClickUndocks = False
+    AlignTabs = True
+    BoldCurrentTab = True
+    Color = 16119543
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    FlatColor = 10263441
+    MultiLine = True
+    ParentColor = False
+    ParentFont = False
+    ShowMenuButton = True
+    ShowShadow = False
+    SoftCorners = True
+    TabColors.HighlightBar = 1350640
+    TabIndex = 0
+    TabOrder = 0
+    TabStyle = tsRoundCorners
+    Transparent = True
+    UseGradients = False
+    FixedDimension = 25
+    object TabSheet1: TRzTabSheet
+      Color = 16119543
+      TabVisible = False
+      OnShow = TabSheet1Show
+      Caption = 'ROOM 1 - 20'
+    end
+    object TabSheet2: TRzTabSheet
+      Color = 16119543
+      TabVisible = False
+      OnShow = TabSheet2Show
+      Caption = 'ROOM 21 - 40'
+    end
+    object TabSheet3: TRzTabSheet
+      Color = 16119543
+      TabVisible = False
+      OnShow = TabSheet3Show
+      Caption = 'ROOM 41 - 60'
+    end
+    object TabSheet5: TRzTabSheet
+      Color = 16119543
+      TabVisible = False
+      OnShow = TabSheet5Show
+      Caption = 'ROOM 120 - 180'
+    end
+    object TabSheet4: TRzTabSheet
+      Color = 16119543
+      OnShow = TabSheet4Show
+      Caption = 'CAFE'
+    end
+  end
+  object Grid: TAdvStringGrid
+    Left = 2
+    Top = 34
+    Width = 699
+    Height = 240
+    Cursor = crDefault
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Color = clWindowText
+    ColCount = 2
+    DrawingStyle = gdsClassic
+    FixedCols = 0
+    RowCount = 4
+    FixedRows = 0
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    ScrollBars = ssBoth
+    TabOrder = 1
+    OnClick = GridClick
+    GridLineColor = 15527152
+    GridFixedLineColor = 13947601
+    OnGetAlignment = GridGetAlignment
+    OnCanEditCell = GridCanEditCell
+    ActiveCellFont.Charset = DEFAULT_CHARSET
+    ActiveCellFont.Color = clWindowText
+    ActiveCellFont.Height = -11
+    ActiveCellFont.Name = 'Tahoma'
+    ActiveCellFont.Style = [fsBold]
+    ActiveCellColor = 16575452
+    ActiveCellColorTo = 16571329
+    ControlLook.FixedGradientMirrorFrom = 16049884
+    ControlLook.FixedGradientMirrorTo = 16247261
+    ControlLook.FixedGradientHoverFrom = 16710648
+    ControlLook.FixedGradientHoverTo = 16446189
+    ControlLook.FixedGradientHoverMirrorFrom = 16049367
+    ControlLook.FixedGradientHoverMirrorTo = 15258305
+    ControlLook.FixedGradientDownFrom = 15853789
+    ControlLook.FixedGradientDownTo = 15852760
+    ControlLook.FixedGradientDownMirrorFrom = 15522767
+    ControlLook.FixedGradientDownMirrorTo = 15588559
+    ControlLook.FixedGradientDownBorder = 14007466
+    ControlLook.DropDownHeader.Font.Charset = DEFAULT_CHARSET
+    ControlLook.DropDownHeader.Font.Color = clWindowText
+    ControlLook.DropDownHeader.Font.Height = -11
+    ControlLook.DropDownHeader.Font.Name = 'Tahoma'
+    ControlLook.DropDownHeader.Font.Style = []
+    ControlLook.DropDownHeader.Visible = True
+    ControlLook.DropDownHeader.Buttons = <>
+    ControlLook.DropDownFooter.Font.Charset = DEFAULT_CHARSET
+    ControlLook.DropDownFooter.Font.Color = clWindowText
+    ControlLook.DropDownFooter.Font.Height = -11
+    ControlLook.DropDownFooter.Font.Name = 'Tahoma'
+    ControlLook.DropDownFooter.Font.Style = []
+    ControlLook.DropDownFooter.Visible = True
+    ControlLook.DropDownFooter.Buttons = <>
+    Filter = <>
+    FilterDropDown.Font.Charset = DEFAULT_CHARSET
+    FilterDropDown.Font.Color = clWindowText
+    FilterDropDown.Font.Height = -11
+    FilterDropDown.Font.Name = 'Tahoma'
+    FilterDropDown.Font.Style = []
+    FilterDropDownClear = '(All)'
+    FixedRowHeight = 22
+    FixedFont.Charset = DEFAULT_CHARSET
+    FixedFont.Color = clWindowText
+    FixedFont.Height = -11
+    FixedFont.Name = 'Tahoma'
+    FixedFont.Style = [fsBold]
+    FloatFormat = '%.2f'
+    Look = glWin7
+    PrintSettings.DateFormat = 'dd/mm/yyyy'
+    PrintSettings.Font.Charset = DEFAULT_CHARSET
+    PrintSettings.Font.Color = clWindowText
+    PrintSettings.Font.Height = -11
+    PrintSettings.Font.Name = 'Tahoma'
+    PrintSettings.Font.Style = []
+    PrintSettings.FixedFont.Charset = DEFAULT_CHARSET
+    PrintSettings.FixedFont.Color = clWindowText
+    PrintSettings.FixedFont.Height = -11
+    PrintSettings.FixedFont.Name = 'Tahoma'
+    PrintSettings.FixedFont.Style = []
+    PrintSettings.HeaderFont.Charset = DEFAULT_CHARSET
+    PrintSettings.HeaderFont.Color = clWindowText
+    PrintSettings.HeaderFont.Height = -11
+    PrintSettings.HeaderFont.Name = 'Tahoma'
+    PrintSettings.HeaderFont.Style = []
+    PrintSettings.FooterFont.Charset = DEFAULT_CHARSET
+    PrintSettings.FooterFont.Color = clWindowText
+    PrintSettings.FooterFont.Height = -11
+    PrintSettings.FooterFont.Name = 'Tahoma'
+    PrintSettings.FooterFont.Style = []
+    PrintSettings.PageNumSep = '/'
+    ScrollWidth = 16
+    SearchFooter.Color = 16645370
+    SearchFooter.ColorTo = 16247261
+    SearchFooter.FindNextCaption = 'Find &next'
+    SearchFooter.FindPrevCaption = 'Find &previous'
+    SearchFooter.Font.Charset = DEFAULT_CHARSET
+    SearchFooter.Font.Color = clWindowText
+    SearchFooter.Font.Height = -11
+    SearchFooter.Font.Name = 'Tahoma'
+    SearchFooter.Font.Style = []
+    SearchFooter.HighLightCaption = 'Highlight'
+    SearchFooter.HintClose = 'Close'
+    SearchFooter.HintFindNext = 'Find next occurence'
+    SearchFooter.HintFindPrev = 'Find previous occurence'
+    SearchFooter.HintHighlight = 'Highlight occurences'
+    SearchFooter.MatchCaseCaption = 'Match case'
+    SortSettings.HeaderColor = 16579058
+    SortSettings.HeaderColorTo = 16579058
+    SortSettings.HeaderMirrorColor = 16380385
+    SortSettings.HeaderMirrorColorTo = 16182488
+    Version = '5.6.0.0'
+  end
+  object AdvSmoothPanel1: TAdvSmoothPanel
+    Left = 2
+    Top = 272
+    Width = 701
+    Height = 93
+    Cursor = crDefault
+    Caption.Text = '  Info : '
+    Caption.HTMLFont.Charset = DEFAULT_CHARSET
+    Caption.HTMLFont.Color = clWindowText
+    Caption.HTMLFont.Height = -11
+    Caption.HTMLFont.Name = 'Tahoma'
+    Caption.HTMLFont.Style = []
+    Caption.Font.Charset = DEFAULT_CHARSET
+    Caption.Font.Color = clWindowText
+    Caption.Font.Height = -16
+    Caption.Font.Name = 'Tahoma'
+    Caption.Font.Style = []
+    Caption.ColorStart = clBlack
+    Caption.ColorEnd = clBlack
+    Caption.GradientType = gtBackwardDiagonal
+    Caption.LineColor = clBlack
+    Fill.Color = clWhite
+    Fill.ColorTo = 13226453
+    Fill.ColorMirror = clNone
+    Fill.ColorMirrorTo = clNone
+    Fill.GradientMirrorType = gtVertical
+    Fill.BorderColor = clGray
+    Fill.Rounding = 10
+    Fill.ShadowOffset = 10
+    Version = '1.0.9.2'
+    Anchors = [akLeft, akRight, akBottom]
+    TabOrder = 2
+    DesignSize = (
+      701
+      93)
+    object AUsed: TAdvSmoothStatusIndicator
+      Left = 11
+      Top = 49
+      Width = 55
+      Height = 25
+      Hint = 'Room Sedang Digunakan'
+      Caption = 'USED'
+      Version = '1.0.1.0'
+      Appearance.Fill.Color = clLime
+      Appearance.Fill.ColorMirror = clNone
+      Appearance.Fill.ColorMirrorTo = clNone
+      Appearance.Fill.GradientType = gtSolid
+      Appearance.Fill.BorderColor = clGray
+      Appearance.Fill.Rounding = 12
+      Appearance.Fill.ShadowOffset = 0
+      Appearance.Font.Charset = DEFAULT_CHARSET
+      Appearance.Font.Color = clBlue
+      Appearance.Font.Height = -15
+      Appearance.Font.Name = 'Tahoma'
+      Appearance.Font.Style = []
+      Anchors = [akLeft, akBottom]
+      ParentShowHint = False
+      ShowHint = True
+      ExplicitTop = 27
+    end
+    object AdvSmoothStatusIndicator2: TAdvSmoothStatusIndicator
+      Left = 72
+      Top = 49
+      Width = 55
+      Height = 27
+      Hint = 'Room Siap Pakai'
+      Caption = 'FREE'
+      Version = '1.0.1.0'
+      Appearance.Fill.Color = clBlack
+      Appearance.Fill.ColorMirror = clNone
+      Appearance.Fill.ColorMirrorTo = clNone
+      Appearance.Fill.GradientType = gtSolid
+      Appearance.Fill.BorderColor = clGray
+      Appearance.Fill.Rounding = 13
+      Appearance.Fill.ShadowOffset = 0
+      Appearance.Font.Charset = DEFAULT_CHARSET
+      Appearance.Font.Color = clWhite
+      Appearance.Font.Height = -15
+      Appearance.Font.Name = 'Tahoma'
+      Appearance.Font.Style = []
+      Anchors = [akLeft, akBottom]
+      ParentShowHint = False
+      ShowHint = True
+      ExplicitTop = 27
+    end
+    object AdvSmoothStatusIndicator3: TAdvSmoothStatusIndicator
+      Left = 256
+      Top = 49
+      Width = 55
+      Height = 27
+      Hint = 'Room Sedang Dalam Perbbaikan'
+      Caption = 'MTC'
+      Version = '1.0.1.0'
+      Appearance.Fill.Color = 10066329
+      Appearance.Fill.ColorMirror = clNone
+      Appearance.Fill.ColorMirrorTo = clNone
+      Appearance.Fill.GradientType = gtSolid
+      Appearance.Fill.BorderColor = clGray
+      Appearance.Fill.Rounding = 13
+      Appearance.Fill.ShadowOffset = 0
+      Appearance.Font.Charset = DEFAULT_CHARSET
+      Appearance.Font.Color = clWhite
+      Appearance.Font.Height = -15
+      Appearance.Font.Name = 'Tahoma'
+      Appearance.Font.Style = []
+      Anchors = [akLeft, akBottom]
+      ParentShowHint = False
+      ShowHint = True
+      ExplicitTop = 27
+    end
+    object AdvSmoothStatusIndicator4: TAdvSmoothStatusIndicator
+      Left = 133
+      Top = 49
+      Width = 55
+      Height = 27
+      Hint = '15 Menit Waktu Room Habis'
+      Caption = 'WAIT'
+      Version = '1.0.1.0'
+      Appearance.Fill.Color = clYellow
+      Appearance.Fill.ColorMirror = clNone
+      Appearance.Fill.ColorMirrorTo = clNone
+      Appearance.Fill.GradientType = gtSolid
+      Appearance.Fill.BorderColor = clGray
+      Appearance.Fill.Rounding = 13
+      Appearance.Fill.ShadowOffset = 0
+      Appearance.Font.Charset = DEFAULT_CHARSET
+      Appearance.Font.Color = clMaroon
+      Appearance.Font.Height = -15
+      Appearance.Font.Name = 'Tahoma'
+      Appearance.Font.Style = []
+      Anchors = [akLeft, akBottom]
+      ParentShowHint = False
+      ShowHint = True
+      ExplicitTop = 27
+    end
+    object AdvSmoothStatusIndicator5: TAdvSmoothStatusIndicator
+      Left = 195
+      Top = 50
+      Width = 55
+      Height = 27
+      Hint = 'Waktu Room Habis'
+      Caption = 'END'
+      Version = '1.0.1.0'
+      Appearance.Fill.Color = 1704189
+      Appearance.Fill.ColorMirror = clNone
+      Appearance.Fill.ColorMirrorTo = clNone
+      Appearance.Fill.GradientType = gtSolid
+      Appearance.Fill.BorderColor = clGray
+      Appearance.Fill.Rounding = 13
+      Appearance.Fill.ShadowOffset = 0
+      Appearance.Font.Charset = DEFAULT_CHARSET
+      Appearance.Font.Color = clCream
+      Appearance.Font.Height = -15
+      Appearance.Font.Name = 'Tahoma'
+      Appearance.Font.Style = []
+      Anchors = [akLeft, akBottom]
+      ParentShowHint = False
+      ShowHint = True
+      ExplicitTop = 28
+    end
+    object ACall: TAdvSmoothStatusIndicator
+      Left = 317
+      Top = 49
+      Width = 55
+      Height = 27
+      Cursor = crHandPoint
+      Hint = 'Room Memanggil Waiter'
+      Caption = 'CALL'
+      Version = '1.0.1.0'
+      Appearance.Fill.Color = clBlue
+      Appearance.Fill.ColorMirror = clNone
+      Appearance.Fill.ColorMirrorTo = clNone
+      Appearance.Fill.GradientType = gtSolid
+      Appearance.Fill.BorderColor = clGray
+      Appearance.Fill.Rounding = 13
+      Appearance.Fill.ShadowOffset = 0
+      Appearance.Font.Charset = DEFAULT_CHARSET
+      Appearance.Font.Color = clCream
+      Appearance.Font.Height = -15
+      Appearance.Font.Name = 'Tahoma'
+      Appearance.Font.Style = []
+      Anchors = [akLeft, akBottom]
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ACallClick
+      ExplicitTop = 27
+    end
+    object AOrder: TAdvSmoothStatusIndicator
+      Left = 378
+      Top = 49
+      Width = 63
+      Height = 27
+      Cursor = crHandPoint
+      Hint = 'Room Order F '#39'&'#39' B'
+      Caption = 'ORDER'
+      Version = '1.0.1.0'
+      Appearance.Fill.Color = 16740792
+      Appearance.Fill.ColorMirror = clNone
+      Appearance.Fill.ColorMirrorTo = clNone
+      Appearance.Fill.GradientType = gtSolid
+      Appearance.Fill.BorderColor = clGray
+      Appearance.Fill.Rounding = 13
+      Appearance.Fill.ShadowOffset = 0
+      Appearance.Font.Charset = DEFAULT_CHARSET
+      Appearance.Font.Color = clCream
+      Appearance.Font.Height = -15
+      Appearance.Font.Name = 'Tahoma'
+      Appearance.Font.Style = []
+      Anchors = [akLeft, akBottom]
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = AOrderClick
+    end
+    object AddHours: TAdvSmoothStatusIndicator
+      Left = 447
+      Top = 49
+      Width = 98
+      Height = 27
+      Cursor = crHandPoint
+      Hint = 'Room Order F '#39'&'#39' B'
+      Caption = 'ADD HOURS'
+      Version = '1.0.1.0'
+      Appearance.Fill.Color = 16777164
+      Appearance.Fill.ColorMirror = clNone
+      Appearance.Fill.ColorMirrorTo = clNone
+      Appearance.Fill.GradientType = gtSolid
+      Appearance.Fill.BorderColor = clGray
+      Appearance.Fill.Rounding = 13
+      Appearance.Fill.ShadowOffset = 0
+      Appearance.Font.Charset = DEFAULT_CHARSET
+      Appearance.Font.Color = clBackground
+      Appearance.Font.Height = -15
+      Appearance.Font.Name = 'Tahoma'
+      Appearance.Font.Style = []
+      Anchors = [akLeft, akBottom]
+      ParentShowHint = False
+      ShowHint = True
+    end
+  end
+  object Menu1: TAdvSmoothMenu
+    Left = 2
+    Top = 1
+    Width = 699
+    Height = 32
+    Anchors = [akLeft, akTop, akRight]
+    Rotation = False
+    Appearance.Fill.Color = clWhite
+    Appearance.Fill.ColorTo = clWhite
+    Appearance.Fill.ColorMirror = clWhite
+    Appearance.Fill.ColorMirrorTo = clWhite
+    Appearance.Fill.GradientMirrorType = gtVertical
+    Appearance.Fill.BorderColor = 13542013
+    Appearance.Fill.Rounding = 0
+    Appearance.Fill.ShadowOffset = 0
+    Appearance.LineColor = clBlack
+    Appearance.IndicatorColor = clBlack
+    Items = <
+      item
+        Caption = 'ROOM 01 - 40'
+        Notes = 'Item 0 notes'
+        Tag = 0
+      end
+      item
+        Caption = 'ROOM 41 - 80'
+        Notes = 'Item 1 notes'
+        Tag = 1
+      end
+      item
+        Caption = 'ROOM 81 - 120'
+        Notes = 'Item 2 notes'
+        Tag = 2
+      end
+      item
+        Caption = 'ROOM 121 - 160'
+        Notes = 'Item 3 notes'
+        Tag = 3
+      end
+      item
+        Caption = 'CAFE'
+        Tag = 0
+      end>
+    ItemAppearance.HoverFont.Charset = DEFAULT_CHARSET
+    ItemAppearance.HoverFont.Color = 16703386
+    ItemAppearance.HoverFont.Height = -19
+    ItemAppearance.HoverFont.Name = 'Tahoma'
+    ItemAppearance.HoverFont.Style = []
+    ItemAppearance.SelectedFont.Charset = DEFAULT_CHARSET
+    ItemAppearance.SelectedFont.Color = clBlack
+    ItemAppearance.SelectedFont.Height = -11
+    ItemAppearance.SelectedFont.Name = 'Tahoma'
+    ItemAppearance.SelectedFont.Style = []
+    ItemAppearance.Font.Charset = DEFAULT_CHARSET
+    ItemAppearance.Font.Color = clBlack
+    ItemAppearance.Font.Height = -19
+    ItemAppearance.Font.Name = 'Tahoma'
+    ItemAppearance.Font.Style = []
+    ItemAppearance.NotesFont.Charset = DEFAULT_CHARSET
+    ItemAppearance.NotesFont.Color = clBlack
+    ItemAppearance.NotesFont.Height = -11
+    ItemAppearance.NotesFont.Name = 'Tahoma'
+    ItemAppearance.NotesFont.Style = []
+    ItemAppearance.GlowColor = 13542013
+    ItemAppearance.GlowOpacity = 150
+    ItemAppearance.GlowColorSelected = 16575452
+    ItemAppearance.GlowOpacitySelected = 200
+    ItemAppearance.GlowColorHover = 16645114
+    ItemAppearance.GlowOpacityHover = 210
+    TabOrder = 3
+    Version = '1.1.5.0'
+    SelectedItemIndex = 0
+    AllowSelectedIndication = True
+    OnItemClick = Menu1ItemClick
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 800
+    Top = 400
+  end
+  object Timer2: TTimer
+    Interval = 2000
+    OnTimer = Timer2Timer
+    Left = 624
+    Top = 184
+  end
+  object spDynamicSkinForm1: TspDynamicSkinForm
+    UseRibbon = False
+    WindowState = wsNormal
+    ShowMDIScrollBars = True
+    QuickButtons = <>
+    QuickButtonsShowHint = False
+    ClientInActiveEffect = False
+    ClientInActiveEffectType = spieSemiTransparent
+    DisableSystemMenu = False
+    PositionInMonitor = sppDesktopCenter
+    UseFormCursorInNCArea = False
+    MaxMenuItemsInWindow = 0
+    ClientWidth = 0
+    ClientHeight = 0
+    HideCaptionButtons = False
+    AlwaysShowInTray = False
+    LogoBitMapTransparent = False
+    AlwaysMinimizeToTray = False
+    UseSkinFontInMenu = True
+    UseSkinFontInCaption = True
+    UseSkinSizeInMenu = True
+    ShowIcon = False
+    MaximizeOnFullScreen = False
+    ShowObjectHint = False
+    UseDefaultObjectHint = True
+    UseSkinCursors = False
+    DefCaptionFont.Charset = DEFAULT_CHARSET
+    DefCaptionFont.Color = clBtnText
+    DefCaptionFont.Height = 14
+    DefCaptionFont.Name = 'Arial'
+    DefCaptionFont.Style = [fsBold]
+    DefInActiveCaptionFont.Charset = DEFAULT_CHARSET
+    DefInActiveCaptionFont.Color = clBtnShadow
+    DefInActiveCaptionFont.Height = 14
+    DefInActiveCaptionFont.Name = 'Arial'
+    DefInActiveCaptionFont.Style = [fsBold]
+    DefMenuItemHeight = 20
+    DefMenuItemFont.Charset = DEFAULT_CHARSET
+    DefMenuItemFont.Color = clWindowText
+    DefMenuItemFont.Height = 14
+    DefMenuItemFont.Name = 'Arial'
+    DefMenuItemFont.Style = []
+    UseDefaultSysMenu = True
+    SupportNCArea = True
+    AlphaBlendAnimation = False
+    AlphaBlendValue = 200
+    AlphaBlend = False
+    MenusAlphaBlend = True
+    MenusAlphaBlendAnimation = True
+    MenusAlphaBlendValue = 200
+    SkinData = DM.SkinData1
+    MinHeight = 0
+    MinWidth = 0
+    MaxHeight = 0
+    MaxWidth = 0
+    Sizeable = True
+    DraggAble = False
+    NCDraggAble = True
+    Magnetic = False
+    MagneticSize = 10
+    BorderIcons = [biSystemMenu]
+    Left = 576
+    Top = 184
+  end
+  object Timer3: TTimer
+    OnTimer = Timer3Timer
+    Left = 528
+    Top = 184
+  end
+end

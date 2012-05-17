@@ -1,0 +1,227 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{0d0b0fbe-5f90-4cc5-b272-b212279a3e80}</ProjectGuid>
+			<MainSource>KaraokeServer.dpr</MainSource>
+			<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<DCC_DependencyCheckOutputName>D:\APP\ProKaraoke Home\KaraokeServer.exe</DCC_DependencyCheckOutputName>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<Version>7.0</Version>
+			<DCC_DebugInformation>False</DCC_DebugInformation>
+			<DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_ExeOutput>C:\Program Files\ProKaraokeEnterprisePlayer</DCC_ExeOutput>
+			<Version>7.0</Version>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Parameters/>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">6</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1033</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Soundlab Indonesia</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.6</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">ProKaraoke Server v4</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.6</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="G:\SOWTWARE\PROGRAMMING TOOLS\Component\FastReport 4.5 Full Source\LibD11\dclfrxTee11.bpl">FastReport 4.0 Tee Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k100.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp100.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="G:\SOWTWARE\PROGRAMMING TOOLS\Component\FastReport 4.5 Full Source\LibD11\dclfrxDB11.bpl">FastReport 4.0 DB Components</Excluded_Packages>
+						<Excluded_Packages Name="G:\SOWTWARE\PROGRAMMING TOOLS\Component\FastReport 4.5 Full Source\LibD11\dclfrxe11.bpl">FastReport 4.0 Exports</Excluded_Packages>
+						<Excluded_Packages Name="G:\SOWTWARE\PROGRAMMING TOOLS\Component\FastReport 4.5 Full Source\LibD11\dclfsADO11.bpl">FastScript 1.9 ADO Components</Excluded_Packages>
+						<Excluded_Packages Name="G:\SOWTWARE\PROGRAMMING TOOLS\Component\FastReport 4.5 Full Source\LibD11\dclfsDB11.bpl">FastScript 1.9 DB Components</Excluded_Packages>
+						<Excluded_Packages Name="G:\SOWTWARE\PROGRAMMING TOOLS\Component\FastReport 4.5 Full Source\LibD11\dclfsIBX11.bpl">FastScript 1.9 IBX Components</Excluded_Packages>
+					</Excluded_Packages>
+					<Source>
+						<Source Name="MainSource">KaraokeServer.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<ItemGroup>
+			<DelphiCompile Include="KaraokeServer.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="uBilling.pas">
+				<Form>FrmBilling</Form>
+			</DCCReference>
+			<DCCReference Include="uDM.pas">
+				<Form>DM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="uLogin.pas">
+				<Form>FrmLogin</Form>
+			</DCCReference>
+			<DCCReference Include="uLookup.pas">
+				<Form>FrmLookup</Form>
+			</DCCReference>
+			<DCCReference Include="uMain.pas">
+				<Form>FrmMain</Form>
+			</DCCReference>
+			<DCCReference Include="uMember.pas">
+				<Form>FrmMember</Form>
+			</DCCReference>
+			<DCCReference Include="uMenuFood.pas">
+				<Form>FrmMenuFood</Form>
+			</DCCReference>
+			<DCCReference Include="uOrderFood.pas">
+				<Form>FrmOrderFood</Form>
+			</DCCReference>
+			<DCCReference Include="uStockAdjustment.pas">
+				<Form>FrmStockAdjustment</Form>
+			</DCCReference>
+			<DCCReference Include="uStockBahanBaku.pas">
+				<Form>FrmStockBahanBaku</Form>
+			</DCCReference>
+			<DCCReference Include="uStockMasuk.pas">
+				<Form>FrmStockMasuk</Form>
+			</DCCReference>
+			<DCCReference Include="uTransBillingCafe.pas">
+				<Form>FrmTransBillingCafe</Form>
+			</DCCReference>
+			<DCCReference Include="uListOrder.pas">
+				<Form>FrmListOrder</Form>
+			</DCCReference>
+			<DCCReference Include="uBiayaRoom.pas">
+				<Form>FrmBiayaRoom</Form>
+			</DCCReference>
+			<DCCReference Include="uListHari.pas">
+				<Form>FrmListHari</Form>
+			</DCCReference>
+			<DCCReference Include="uSplashScreen.pas">
+				<Form>FrmSpalshScreen</Form>
+			</DCCReference>
+			<DCCReference Include="uListTransBilling.pas">
+				<Form>FrmListTransBilling</Form>
+			</DCCReference>
+			<DCCReference Include="uDurasiRoom.pas">
+				<Form>FrmDurasiRoom</Form>
+			</DCCReference>
+			<DCCReference Include="uPindahRoom.pas">
+				<Form>FrmPindahRoom</Form>
+			</DCCReference>
+			<DCCReference Include="uSetting.pas">
+				<Form>FrmSetting</Form>
+			</DCCReference>
+			<DCCReference Include="uRoom.pas">
+				<Form>FrmRoom</Form>
+			</DCCReference>
+			<DCCReference Include="uCheckOut.pas">
+				<Form>FrmCheckOut</Form>
+			</DCCReference>
+			<DCCReference Include="uMenuFoodDetail.pas">
+				<Form>FrmMenuFoodDetail</Form>
+			</DCCReference>
+			<DCCReference Include="uUserRegistration.pas">
+				<Form>FrmUserRegistration</Form>
+			</DCCReference>
+			<DCCReference Include="uRemoteRoom.pas">
+				<Form>FrmRemoteRoom</Form>
+			</DCCReference>
+			<DCCReference Include="uTransferVideo.pas">
+				<Form>FrmTransferVideo</Form>
+			</DCCReference>
+			<DCCReference Include="..\KaraokeEnterprise\xVideo.pas"/>
+			<DCCReference Include="uListFoodAndBeverage.pas">
+				<Form>FrmListFoodAndBeverage</Form>
+			</DCCReference>
+			<DCCReference Include="uCryptDatabase.pas">
+				<Form>FrmCryptDatabase</Form>
+			</DCCReference>
+			<DCCReference Include="uFilter.pas">
+				<Form>FrmFilter</Form>
+			</DCCReference>
+			<DCCReference Include="uTransBilling.pas">
+				<Form>FrmTransBilling</Form>
+			</DCCReference>
+			<DCCReference Include="uEditVideo.pas">
+				<Form>FrmEditVideo</Form>
+			</DCCReference>
+			<DCCReference Include="uChat.pas">
+				<Form>FrmChat</Form>
+			</DCCReference>
+			<DCCReference Include="uPassword.pas">
+				<Form>FrmPassword</Form>
+			</DCCReference>
+			<DCCReference Include="uSyncDatabase.pas">
+				<Form>FrmSyncDatabase</Form>
+			</DCCReference>
+			<DCCReference Include="C:\Program Files\TurboPower LockBox 3\run\library surface\uTPLb_Codec.pas"/>
+			<DCCReference Include="C:\Program Files\TurboPower LockBox 3\run\library surface\uTPLb_CodecIntf.pas"/>
+			<DCCReference Include="C:\Program Files\TurboPower LockBox 3\run\library surface\uTPLb_Constants.pas"/>
+			<DCCReference Include="C:\Program Files\TurboPower LockBox 3\run\library surface\uTPLb_CryptographicLibrary.pas"/>
+			<DCCReference Include="C:\Program Files\TurboPower LockBox 3\run\library surface\uTPLb_Hash.pas"/>
+			<DCCReference Include="C:\Program Files\TurboPower LockBox 3\run\library surface\uTPLb_OpenSSL.pas"/>
+			<DCCReference Include="C:\Program Files\TurboPower LockBox 3\run\library surface\uTPLb_Signatory.pas"/>
+			<DCCReference Include="C:\Program Files\TurboPower LockBox 3\run\library surface\uTPLb_SimpleBlockCipher.pas"/>
+			<DCCReference Include="uDemoBlockModeCipher.pas"/>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+	</Project>

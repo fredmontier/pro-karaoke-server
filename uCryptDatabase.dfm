@@ -1,0 +1,411 @@
+object FrmCryptDatabase: TFrmCryptDatabase
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  Caption = 'Enrypt Database'
+  ClientHeight = 513
+  ClientWidth = 736
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  DesignSize = (
+    736
+    513)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object spSkinStdLabel1: TspSkinStdLabel
+    Left = 24
+    Top = 29
+    Width = 102
+    Height = 13
+    EllipsType = spetNone
+    UseSkinFont = True
+    UseSkinColor = True
+    DefaultFont.Charset = DEFAULT_CHARSET
+    DefaultFont.Color = clWindowText
+    DefaultFont.Height = -11
+    DefaultFont.Name = 'Tahoma'
+    DefaultFont.Style = []
+    SkinData = DM.SkinData1
+    SkinDataName = 'stdlabel'
+    Caption = 'Pilih direktory sumber'
+  end
+  object spSkinStdLabel2: TspSkinStdLabel
+    Left = 383
+    Top = 25
+    Width = 88
+    Height = 13
+    EllipsType = spetNone
+    UseSkinFont = True
+    UseSkinColor = True
+    DefaultFont.Charset = DEFAULT_CHARSET
+    DefaultFont.Color = clWindowText
+    DefaultFont.Height = -11
+    DefaultFont.Name = 'Tahoma'
+    DefaultFont.Style = []
+    SkinData = DM.SkinData1
+    SkinDataName = 'stdlabel'
+    Caption = 'Direktory tujuan : '
+  end
+  object btnLoadDir: TspSkinButton
+    Left = 461
+    Top = 438
+    Width = 122
+    Height = 35
+    HintImageIndex = 0
+    TabOrder = 0
+    DrawDefault = True
+    SkinData = DM.SkinData1
+    SkinDataName = 'button'
+    AlphaBlend = False
+    AlphaBlendValue = 200
+    UseSkinCursor = False
+    DefaultFont.Charset = DEFAULT_CHARSET
+    DefaultFont.Color = clWindowText
+    DefaultFont.Height = 14
+    DefaultFont.Name = 'Arial'
+    DefaultFont.Style = []
+    UseSkinFont = True
+    DefaultWidth = 0
+    DefaultHeight = 0
+    CheckedMode = False
+    ImageIndex = -1
+    AlwaysShowLayeredFrame = False
+    UseSkinSize = False
+    UseSkinFontColor = True
+    RepeatMode = False
+    RepeatInterval = 100
+    AllowAllUp = False
+    TabStop = True
+    CanFocused = True
+    Down = False
+    GroupIndex = 0
+    Caption = 'Mulai Encrypt'
+    NumGlyphs = 1
+    Spacing = 1
+    OnClick = btnLoadDirClick
+  end
+  object FileListBox1: TspSkinFileListBox
+    Left = 383
+    Top = 48
+    Width = 329
+    Height = 363
+    HintImageIndex = 0
+    TabOrder = 1
+    DrawDefault = True
+    SkinData = DM.SkinData1
+    SkinDataName = 'listbox'
+    AlphaBlend = False
+    AlphaBlendValue = 200
+    UseSkinCursor = False
+    DefaultFont.Charset = DEFAULT_CHARSET
+    DefaultFont.Color = clWindowText
+    DefaultFont.Height = 14
+    DefaultFont.Name = 'Arial'
+    DefaultFont.Style = []
+    UseSkinFont = True
+    DefaultWidth = 0
+    DefaultHeight = 0
+    ShowCaptionButtons = True
+    UseSkinItemHeight = True
+    HorizontalExtent = False
+    Columns = 0
+    RowCount = 0
+    ImageIndex = -1
+    NumGlyphs = 1
+    Spacing = 2
+    CaptionMode = False
+    DefaultCaptionHeight = 20
+    DefaultCaptionFont.Charset = DEFAULT_CHARSET
+    DefaultCaptionFont.Color = clWindowText
+    DefaultCaptionFont.Height = 14
+    DefaultCaptionFont.Name = 'Arial'
+    DefaultCaptionFont.Style = []
+    DefaultItemHeight = 20
+    ItemIndex = -1
+    MultiSelect = False
+    ListBoxFont.Charset = DEFAULT_CHARSET
+    ListBoxFont.Color = clWindowText
+    ListBoxFont.Height = 14
+    ListBoxFont.Name = 'Arial'
+    ListBoxFont.Style = []
+    ListBoxTabOrder = 0
+    ListBoxTabStop = True
+    ListBoxDragMode = dmManual
+    ListBoxDragKind = dkDrag
+    ListBoxDragCursor = crDrag
+    ExtandedSelect = True
+    Sorted = True
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 14
+    Font.Name = 'Arial'
+    Font.Style = []
+    Mask = '*.mpg'
+  end
+  object spSkinButton1: TspSkinButton
+    Left = 589
+    Top = 438
+    Width = 123
+    Height = 35
+    HintImageIndex = 0
+    TabOrder = 2
+    DrawDefault = True
+    SkinData = DM.SkinData1
+    SkinDataName = 'button'
+    AlphaBlend = False
+    AlphaBlendValue = 200
+    UseSkinCursor = False
+    DefaultFont.Charset = DEFAULT_CHARSET
+    DefaultFont.Color = clWindowText
+    DefaultFont.Height = 14
+    DefaultFont.Name = 'Arial'
+    DefaultFont.Style = []
+    UseSkinFont = True
+    DefaultWidth = 0
+    DefaultHeight = 0
+    CheckedMode = False
+    ImageIndex = -1
+    AlwaysShowLayeredFrame = False
+    UseSkinSize = False
+    UseSkinFontColor = True
+    RepeatMode = False
+    RepeatInterval = 100
+    AllowAllUp = False
+    TabStop = True
+    CanFocused = True
+    Down = False
+    GroupIndex = 0
+    Caption = 'Selesai'
+    NumGlyphs = 1
+    Spacing = 1
+    OnClick = spSkinButton1Click
+  end
+  object DS: TRzDirectoryTree
+    Left = 24
+    Top = 48
+    Width = 329
+    Height = 329
+    HideSelection = False
+    Indent = 19
+    SelectionPen.Color = clBtnShadow
+    TabOrder = 3
+    OnClick = DSClick
+  end
+  object CheckBox1: TRzCheckBox
+    Left = 383
+    Top = 417
+    Width = 132
+    Height = 15
+    Caption = 'Skip format tidak sesuai'
+    State = cbUnchecked
+    TabOrder = 4
+    Transparent = True
+    WordWrap = True
+  end
+  object CheckBox2: TRzCheckBox
+    Left = 608
+    Top = 417
+    Width = 98
+    Height = 15
+    Caption = 'Hapus Database'
+    State = cbUnchecked
+    TabOrder = 5
+    Transparent = True
+    WordWrap = True
+  end
+  object ServerDir: TspSkinDirectoryEdit
+    Left = 476
+    Top = 22
+    Width = 236
+    Height = 20
+    DefaultColor = clWindow
+    DefaultFont.Charset = DEFAULT_CHARSET
+    DefaultFont.Color = clBlack
+    DefaultFont.Height = 14
+    DefaultFont.Name = 'Arial'
+    DefaultFont.Style = []
+    UseSkinFont = True
+    DefaultWidth = 0
+    DefaultHeight = 0
+    ButtonMode = True
+    SkinData = DM.SkinData1
+    SkinDataName = 'buttonedit'
+    AlphaBlend = False
+    AlphaBlendValue = 0
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = 14
+    Font.Name = 'Arial'
+    Font.Style = []
+    Anchors = [akTop, akRight]
+    ParentFont = False
+    TabOrder = 6
+    ButtonImageIndex = 0
+    LeftImageIndex = -1
+    LeftImageHotIndex = -1
+    LeftImageDownIndex = -1
+    RightImageIndex = -1
+    RightImageHotIndex = -1
+    RightImageDownIndex = -1
+    DlgTreeShowLines = True
+    DlgTreeButtonExpandImageIndex = 0
+    DlgTreeButtonNoExpandImageIndex = 1
+    DlgShowToolBar = True
+    DlgToolButtonImageIndex = 0
+  end
+  object pbarCustom: TProgressBar
+    Left = 0
+    Top = 492
+    Width = 736
+    Height = 21
+    Align = alBottom
+    TabOrder = 7
+    ExplicitTop = 452
+    ExplicitWidth = 512
+  end
+  object rgCustomBlockChain: TRadioGroup
+    Left = 24
+    Top = 383
+    Width = 329
+    Height = 90
+    Caption = 'Encrypt Chaining mode'
+    Columns = 2
+    ItemIndex = 1
+    Items.Strings = (
+      'ECB'
+      'CBC'
+      'PCBC'
+      'CFB'
+      'CFB 8-bit'
+      'CTR'
+      'OFB')
+    TabOrder = 8
+  end
+  object spDynamicSkinForm1: TspDynamicSkinForm
+    UseRibbon = False
+    WindowState = wsNormal
+    ShowMDIScrollBars = True
+    QuickButtons = <>
+    QuickButtonsShowHint = False
+    ClientInActiveEffect = False
+    ClientInActiveEffectType = spieSemiTransparent
+    DisableSystemMenu = False
+    PositionInMonitor = sppScreenCenter
+    UseFormCursorInNCArea = False
+    MaxMenuItemsInWindow = 0
+    ClientWidth = 0
+    ClientHeight = 0
+    HideCaptionButtons = False
+    AlwaysShowInTray = False
+    LogoBitMapTransparent = False
+    AlwaysMinimizeToTray = False
+    UseSkinFontInMenu = True
+    UseSkinFontInCaption = True
+    UseSkinSizeInMenu = True
+    ShowIcon = False
+    MaximizeOnFullScreen = False
+    ShowObjectHint = False
+    UseDefaultObjectHint = True
+    UseSkinCursors = False
+    DefCaptionFont.Charset = DEFAULT_CHARSET
+    DefCaptionFont.Color = clBtnText
+    DefCaptionFont.Height = 14
+    DefCaptionFont.Name = 'Arial'
+    DefCaptionFont.Style = [fsBold]
+    DefInActiveCaptionFont.Charset = DEFAULT_CHARSET
+    DefInActiveCaptionFont.Color = clBtnShadow
+    DefInActiveCaptionFont.Height = 14
+    DefInActiveCaptionFont.Name = 'Arial'
+    DefInActiveCaptionFont.Style = [fsBold]
+    DefMenuItemHeight = 20
+    DefMenuItemFont.Charset = DEFAULT_CHARSET
+    DefMenuItemFont.Color = clWindowText
+    DefMenuItemFont.Height = 14
+    DefMenuItemFont.Name = 'Arial'
+    DefMenuItemFont.Style = []
+    UseDefaultSysMenu = True
+    SupportNCArea = True
+    AlphaBlendAnimation = False
+    AlphaBlendValue = 200
+    AlphaBlend = False
+    MenusAlphaBlend = False
+    MenusAlphaBlendAnimation = False
+    MenusAlphaBlendValue = 200
+    SkinData = DM.SkinData1
+    MinHeight = 0
+    MinWidth = 0
+    MaxHeight = 0
+    MaxWidth = 0
+    Sizeable = True
+    DraggAble = False
+    NCDraggAble = True
+    Magnetic = False
+    MagneticSize = 10
+    BorderIcons = [biSystemMenu, biRollUp]
+    Left = 32
+    Top = 56
+  end
+  object Signatory1: TSignatory
+    Codec = codecRSA
+    Left = 560
+    Top = 328
+  end
+  object Sig: TOpenSSL_Signatory
+    LibPath = 'V:\projects\openssl\win32 binaries'
+    LibName = 'libeay32.dll'
+    RequiredVersion = '1.0.0.0'
+    AsymetricKeySizeInBits = 2048
+    PrivateKeyStorageCipher = cipher_InTheClear
+    Left = 624
+    Top = 328
+  end
+  object codecRSA: TCodec
+    AsymetricKeySizeInBits = 1024
+    CryptoLibrary = CryptographicLibrary1
+    Left = 504
+    Top = 328
+    StreamCipherId = 'native.RSA'
+    BlockCipherId = ''
+    ChainId = 'native.CBC'
+  end
+  object codecCustomBlock: TCodec
+    AsymetricKeySizeInBits = 1024
+    CryptoLibrary = CryptographicLibrary1
+    Left = 528
+    Top = 240
+    StreamCipherId = 'native.StreamToBlock'
+    BlockCipherId = 'native.AES-256'
+    ChainId = 'native.CFB'
+  end
+  object codecMainDemo: TCodec
+    AsymetricKeySizeInBits = 1024
+    CryptoLibrary = CryptographicLibrary1
+    Left = 528
+    Top = 184
+    StreamCipherId = 'native.XXTEA.Large.Littleend'
+    BlockCipherId = ''
+    ChainId = 'native.CBC'
+  end
+  object ScribbleHash: THash
+    CryptoLibrary = CryptographicLibrary1
+    Left = 616
+    Top = 184
+    HashId = 'native.hash.SHA-1'
+  end
+  object StringHash: THash
+    CryptoLibrary = CryptographicLibrary1
+    Left = 616
+    Top = 112
+    HashId = 'native.hash.SHA-384'
+  end
+  object CryptographicLibrary1: TCryptographicLibrary
+    Left = 528
+    Top = 112
+  end
+end
